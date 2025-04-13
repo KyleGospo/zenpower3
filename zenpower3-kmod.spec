@@ -8,7 +8,7 @@ Version:  {{{ git_dir_version }}}
 Release:  1%{?dist}
 Summary:  Zenpower3 is a Linux kernel driver for reading temperature, voltage(SVI2), current(SVI2) and power(SVI2) for AMD Zen family CPUs
 License:  GPLv2
-URL:      https://git.exozy.me/a/zenpower3
+URL:      https://github.com/AliEmreSenel/zenpower3
 
 Source0:  %{url}/archive/master.tar.gz
 Source1:  Makefile
@@ -27,7 +27,7 @@ Zenpower3 is a Linux kernel driver for reading temperature, voltage(SVI2), curre
 # print kmodtool output for debugging purposes:
 kmodtool --target %{_target_cpu} --kmodname %{name} %{?buildforkernels:--%{buildforkernels}} %{?kernels:--for-kernels "%{?kernels}"} 2>/dev/null
 
-%autosetup -n zenpower3
+%autosetup -n zenpower3-master
 
 rm Makefile
 rm dkms.conf
